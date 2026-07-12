@@ -1,23 +1,18 @@
 replicaCount: 1
-
 image:
   repository: dovanminh98/authorize-gateway-lab-web
-  tag: "test-001"
+  tag: "afbc699"
   pullPolicy: IfNotPresent
-
 container:
   port: 8080
-
 service:
   type: NodePort
   port: 80
   targetPort: 8080
   nodePort: 30081
-
 environment:
   aspnetcoreEnvironment: Production
   aspnetcoreUrls: http://+:8080
-
 probes:
   readiness:
     path: /ShareRequests
@@ -25,19 +20,16 @@ probes:
     periodSeconds: 5
     timeoutSeconds: 3
     failureThreshold: 6
-
   liveness:
     path: /ShareRequests
     initialDelaySeconds: 20
     periodSeconds: 10
     timeoutSeconds: 3
     failureThreshold: 3
-
 resources:
   requests:
     cpu: 50m
     memory: 64Mi
-
   limits:
     cpu: 300m
     memory: 256Mi
