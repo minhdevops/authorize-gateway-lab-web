@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Document\\devops\\authorize-gateway-lab-web\\AuthorizeGatewayLab.Web\\mnt\\data\\AuthorizeGatewayLab.Web\\AuthorizeGatewayLab.Web.csproj",
+      "projectUniqueName": "D:\\Document\\devops\\authorize-gateway-lab-web\\AuthorizeGatewayLab.Web\\AuthorizeGatewayLab.Web.csproj",
       "projectName": "AuthorizeGatewayLab.Web",
-      "projectPath": "D:\\Document\\devops\\authorize-gateway-lab-web\\AuthorizeGatewayLab.Web\\mnt\\data\\AuthorizeGatewayLab.Web\\AuthorizeGatewayLab.Web.csproj",
+      "projectPath": "D:\\Document\\devops\\authorize-gateway-lab-web\\AuthorizeGatewayLab.Web\\AuthorizeGatewayLab.Web.csproj",
       "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "D:\\Document\\devops\\authorize-gateway-lab-web\\AuthorizeGatewayLab.Web\\mnt\\data\\AuthorizeGatewayLab.Web\\obj\\",
+      "outputPath": "D:\\Document\\devops\\authorize-gateway-lab-web\\AuthorizeGatewayLab.Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config"

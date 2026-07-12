@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AuthorizeGatewayLab.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dc5fc95c344b91bbbdf691af6e002195e255d1fc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e8bfa603a17ca962e7186f78d6dfd396839269e4")]
 [assembly: System.Reflection.AssemblyProductAttribute("AuthorizeGatewayLab.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AuthorizeGatewayLab.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

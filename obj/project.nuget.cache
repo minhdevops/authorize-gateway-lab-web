@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dbpuyyf7Z1k=",
+  "dgSpecHash": "9vWrjK/u6bY=",
   "success": true,
-  "projectFilePath": "D:\\Document\\devops\\authorize-gateway-lab-web\\AuthorizeGatewayLab.Web\\mnt\\data\\AuthorizeGatewayLab.Web\\AuthorizeGatewayLab.Web.csproj",
+  "projectFilePath": "D:\\Document\\devops\\authorize-gateway-lab-web\\AuthorizeGatewayLab.Web\\AuthorizeGatewayLab.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.17\\microsoft.netcore.app.ref.8.0.17.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.17\\microsoft.windowsdesktop.app.ref.8.0.17.nupkg.sha512",
