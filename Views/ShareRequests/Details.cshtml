@@ -1,0 +1,90 @@
+@model ShareRequest
+@{
+    ViewData["Title"] = "Chi tiết yêu cầu chia sẻ";
+}
+
+<div class="mb-3">
+    <a class="btn btn-outline-secondary btn-sm" asp-action="Index">← Quay lại danh sách</a>
+</div>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @TempData["Success"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @TempData["Error"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
+<div class="row g-4">
+    <div class="col-lg-8">
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                <h4 class="mb-0 fw-bold">Chi tiết yêu cầu chia sẻ</h4>
+                @if (Model.Status == "Approved")
+                {
+                    <span class="badge text-bg-success fs-6">Approved</span>
+                }
+                else if (Model.Status == "Rejected")
+                {
+                    <span class="badge text-bg-danger fs-6">Rejected</span>
+                }
+                else
+                {
+                    <span class="badge text-bg-warning fs-6">Pending</span>
+                }
+            </div>
+            <div class="card-body">
+                <dl class="row mb-0 detail-list">
+                    <dt class="col-sm-4">TransactionId</dt>
+                    <dd class="col-sm-8 fw-semibold">@Model.TransactionId</dd>
+
+                    <dt class="col-sm-4">CitizenId</dt>
+                    <dd class="col-sm-8">@Model.CitizenId</dd>
+
+                    <dt class="col-sm-4">FullName</dt>
+                    <dd class="col-sm-8">@Model.FullName</dd>
+
+                    <dt class="col-sm-4">PhoneNumber</dt>
+                    <dd class="col-sm-8">@Model.PhoneNumber</dd>
+
+                    <dt class="col-sm-4">Status</dt>
+                    <dd class="col-sm-8">@Model.Status</dd>
+
+                    <dt class="col-sm-4">CreatedAt</dt>
+                    <dd class="col-sm-8">@Model.CreatedAt.ToString("dd/MM/yyyy HH:mm")</dd>
+
+                    <dt class="col-sm-4">UpdatedAt</dt>
+                    <dd class="col-sm-8">@(Model.UpdatedAt?.ToString("dd/MM/yyyy HH:mm") ?? "-")</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-white fw-bold">Thao tác</div>
+            <div class="card-body d-grid gap-2">
+                <form asp-action="Approve" asp-route-id="@Model.Id" method="post">
+                    @Html.AntiForgeryToken()
+                    <button class="btn btn-success w-100" type="submit">Chia sẻ</button>
+                </form>
+
+                <form asp-action="Reject" asp-route-id="@Model.Id" method="post">
+                    @Html.AntiForgeryToken()
+                    <button class="btn btn-danger w-100" type="submit">Từ chối</button>
+                </form>
+
+                <a class="btn btn-outline-primary" asp-action="SharedInfo" asp-route-transactionId="@Model.TransactionId">
+                    Xem dữ liệu 8 trường
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+body {
+    background: #f5f7fb;
+}
+.card {
+    border-radius: 14px;
+}
+.table th {
+    white-space: nowrap;
+}
+.detail-list dt {
+    color: #6c757d;
+}
+.info-box {
+    border: 1px solid #e9ecef;
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    min-height: 82px;
+}
+.info-box span {
+    display: block;
+    color: #6c757d;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+.info-box strong {
+    font-size: 16px;
+}

@@ -1,0 +1,61 @@
+@model List<ShareRequest>
+@{
+    ViewData["Title"] = "Danh sách yêu cầu chia sẻ";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h2 class="fw-bold mb-1">Danh sách yêu cầu chia sẻ</h2>
+        <div class="text-muted">Dữ liệu đang dùng mock service để test giao diện local.</div>
+    </div>
+    <span class="badge text-bg-secondary fs-6">@Model.Count yêu cầu</span>
+</div>
+
+<div class="card shadow-sm border-0">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle">
+                <thead class="table-light">
+                <tr>
+                    <th>TransactionId</th>
+                    <th>CitizenId</th>
+                    <th>FullName</th>
+                    <th>PhoneNumber</th>
+                    <th>Status</th>
+                    <th>CreatedAt</th>
+                    <th class="text-end">Thao tác</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="fw-semibold">@item.TransactionId</td>
+                        <td>@item.CitizenId</td>
+                        <td>@item.FullName</td>
+                        <td>@item.PhoneNumber</td>
+                        <td>
+                            @if (item.Status == "Approved")
+                            {
+                                <span class="badge text-bg-success">Approved</span>
+                            }
+                            else if (item.Status == "Rejected")
+                            {
+                                <span class="badge text-bg-danger">Rejected</span>
+                            }
+                            else
+                            {
+                                <span class="badge text-bg-warning">Pending</span>
+                            }
+                        </td>
+                        <td>@item.CreatedAt.ToString("dd/MM/yyyy HH:mm")</td>
+                        <td class="text-end">
+                            <a class="btn btn-sm btn-outline-primary" asp-action="Details" asp-route-id="@item.Id">Xem chi tiết</a>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

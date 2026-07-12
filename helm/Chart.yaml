@@ -1,0 +1,6 @@
+apiVersion: v2
+name: authorize-gateway-lab-web
+description: Authorize Gateway MVC LAB
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
